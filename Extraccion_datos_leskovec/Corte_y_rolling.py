@@ -1,7 +1,13 @@
 import glob
 import pandas as pd
+import os 
 
-filenames = glob.glob('New_data_disgregada/*.csv')
+filenames = glob.glob('Data_Disgregada/*.csv')
+
+try:
+    os.system("mkdir Series_a_ajustar")
+except:
+    pass
 
 for filename in filenames: 
 
@@ -31,4 +37,4 @@ for filename in filenames:
     # Rolling window of 24H to extract the trend
     rolling_dropped = resample_dropped.rolling('1D', center=True).mean()
     
-    rolling_dropped.to_csv('Nuevo_corte/Corte_id{}.csv'.format(fileid))
+    rolling_dropped.to_csv('Series_a_ajustar/Corte_id{}.csv'.format(fileid))
