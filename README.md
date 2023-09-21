@@ -3,7 +3,7 @@
 Dentro de la carpeta Extraccion de datos hacer lo siguiente:
 
 - Primero corre Extraction_data_leskovec (python Extraccion...py) para aislar las series en una carpeta que es Data Disgregada.
-Necesita data_original_leskovec.txt (si el archivo tiene extension .txt.zst, primero descomprimir este archivo).
+Necesita data_original_leskovec.txt (si el archivo tiene extension .txt.zst, primero descomprimir este archivo. Descargar de https://nube.df.uba.ar/index.php/s/Dx2pk7rJ96CTq8s).
 
 - Después cortamos las series hasta 3 días antes del pico y 21 despues con python Corte...py (esto hace el corte + suavizado). La integracion despues se hace hasta una semana desde algun pico.
 
